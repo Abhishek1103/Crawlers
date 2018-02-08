@@ -23,13 +23,4 @@ for url in lst:
 
 stock.write("\n")
 stock.close()
-# sourceCode = requests.get(url3, proxies=proxy)
-# data = sourceCode.text
-# soup = BeautifulSoup(data, "html.parser")
-# #for i in range(1):
-# for link in soup.find_all('span'):
-#     #print(link.text)
-#     #s = str(link.get('class'))
-#     #if s[0:5] == "last_":
-#     if str(link.get('class')) == "_Rnb fmob_pr fac-l":
-#         print(link.text)
+
