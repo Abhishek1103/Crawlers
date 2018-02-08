@@ -2,8 +2,6 @@ import requests as req
 from bs4 import BeautifulSoup
 from queue import *
 
-proxy = {"http": "http://edcguest:edcguest@172.31.52.54:3128/",
-                "https": "http://edcguest:edcguest@172.31.52.54:3128/"}
 
 #q = Queue()
 st = set()
