@@ -2,10 +2,14 @@ import requests as req
 from bs4 import BeautifulSoup
 from queue import *
 
+
+#proxy = {"http": "http://username:password@<Proxy_IP:Port>/",
+#                "https": "http://username:password@<Proxy_IP:Port>/"}
 q = Queue()
 
 linksFile = open("Links","a")
 initialUrl = "https://timesofindia.indiatimes.com"
+#source = req.get(initialUrl, proxies=proxy)
 source = req.get(initialUrl)
 data = source.text
 soup = BeautifulSoup(data, "html.parser")

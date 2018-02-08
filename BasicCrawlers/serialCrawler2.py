@@ -2,6 +2,8 @@ import requests as req
 from bs4 import BeautifulSoup
 from queue import *
 
+#proxy = {"http": "http://username:password@<Proxy_IP:Port>/",
+#                "https": "http://username:password@<Proxy_IP:Port>/"}
 
 #q = Queue()
 st = set()
@@ -12,7 +14,8 @@ linksFile = open("DistinctLinks","w")
 initialUrl = "https://timesofindia.indiatimes.com"
 #initialUrl = "https://www.youtube.com/"
 initialUrl = input()
-source = req.get(initialUrl, proxies=proxy)
+#source = req.get(initialUrl, proxies=proxy)
+source = req.get(initialUrl)
 data = source.text
 soup = BeautifulSoup(data, "html.parser")
 
@@ -46,6 +49,7 @@ try:
                 print(str(ex)+": Invalid URL")
     for lnk in st:
         linksFile.write(str(lnk)+"\n")
+    linksFile.close()
 except Exception as ex:
     linksFile.close()
     template = "An exception of type {0} occurred. Arguments:\n{1!r}"
