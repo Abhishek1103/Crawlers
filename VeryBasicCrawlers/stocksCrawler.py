@@ -11,7 +11,7 @@ stock = open("/home/aks/Desktop/stocks.txt","a")
 d = datetime.datetime.now().strftime ("%d")
 stock.write(str(d)+" ")
 for url in lst:
-    sourceCode = requests.get(url, proxies=proxy)
+    sourceCode = requests.get(url)
     data = sourceCode.text
     #print(data)
     soup = BeautifulSoup(data, "html.parser")
