@@ -6,8 +6,6 @@ url1 = "https://economictimes.indiatimes.com/indices/sensex_30_companies"
 url2 = "https://economictimes.indiatimes.com/hindi/indices/nifty_50_companies"
 
 lst = [url1, url2]
-proxy = {"http": "http://edcguest:edcguest@172.31.52.54:3128/",
-                "https": "http://edcguest:edcguest@172.31.52.54:3128/"}
 
 stock = open("/home/aks/Desktop/stocks.txt","a")
 d = datetime.datetime.now().strftime ("%d")
